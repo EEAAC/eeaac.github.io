@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,77 +25,77 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info-card">
-                    <h3>Get in Touch</h3>
+                    <h3 data-i18n="contact.get.h3">Get in Touch</h3>
                     <div class="item">
                         <div class="item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
                         <div>
-                            <h4>Address</h4>
-                            <p>Κρήτης 45, Peania 190 02<br>Attica, Greece</p>
+                            <h4 data-i18n="contact.addr.h4">Address</h4>
+                            <p data-i18n="contact.addr.p">Κρήτης 45, Peania 190 02<br>Attica, Greece</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div>
                         <div>
-                            <h4>Phone</h4>
-                            <p>+30 210 36543069<br><span style="font-size:.85rem;opacity:.8">Monday – Friday, 09:00 – 18:00 EET</span></p>
+                            <h4 data-i18n="contact.phone.h4">Phone</h4>
+                            <p data-i18n="contact.phone.p">+30 210 36543069<br><span style="font-size:.85rem;opacity:.8">Monday – Friday, 09:00 – 18:00 EET</span></p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
                         <div>
-                            <h4>Email</h4>
-                            <p>General: info@elliniki-eng.gr<br>Admissions: admissions@elliniki-eng.gr<br>Media: press@elliniki-eng.gr</p>
+                            <h4 data-i18n="contact.email.h4">Email</h4>
+                            <p data-i18n="contact.email.p">General: info@eea.edu.gr<br>Admissions: admissions@eea.edu.gr<br>Media: press@eea.edu.gr</p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
                         <div>
-                            <h4>Office Hours</h4>
-                            <p>Monday – Friday: 09:00 – 18:00<br>Saturday: 10:00 – 14:00 (admissions only)<br>Sunday: closed</p>
+                            <h4 data-i18n="contact.hours.h4">Office Hours</h4>
+                            <p data-i18n="contact.hours.p">Monday – Friday: 09:00 – 18:00<br>Saturday: 10:00 – 14:00 (admissions only)<br>Sunday: closed</p>
                         </div>
                     </div>
                 </div>
 
                 <form class="contact-form" id="contact-form">
-                    <h3 style="color:var(--primary-dark);margin-bottom:8px">Send us a message</h3>
-                    <p style="color:var(--text-muted);margin-bottom:20px;font-size:.9rem">Fill in the form below and a member of the appropriate department will reply within two working days.</p>
+                    <h3 style="color:var(--primary-dark);margin-bottom:8px" data-i18n="contact.form.h3">Send us a message</h3>
+                    <p style="color:var(--text-muted);margin-bottom:20px;font-size:.9rem" data-i18n="contact.form.intro">Fill in the form below and a member of the appropriate department will reply within two working days.</p>
                     <div class="form-message"></div>
                     <div class="form-group">
-                        <label>Full Name *</label>
+                        <label data-i18n="contact.form.name">Full Name *</label>
                         <input type="text" required>
                     </div>
                     <div class="form-group">
-                        <label>Email Address *</label>
+                        <label data-i18n="contact.form.email">Email Address *</label>
                         <input type="email" required>
                     </div>
                     <div class="form-group">
-                        <label>Phone (optional)</label>
+                        <label data-i18n="contact.form.phone">Phone (optional)</label>
                         <input type="tel">
                     </div>
                     <div class="form-group">
-                        <label>I am writing about *</label>
+                        <label data-i18n="contact.form.topic">I am writing about *</label>
                         <select required>
-                            <option value="">Please select…</option>
-                            <option>Undergraduate admissions</option>
-                            <option>Master's admissions</option>
-                            <option>Scholarships &amp; financial aid</option>
-                            <option>International students</option>
-                            <option>Industry partnerships</option>
-                            <option>Media / press enquiry</option>
-                            <option>Other</option>
+                            <option value="" data-i18n="contact.form.select">Please select…</option>
+                            <option data-i18n="contact.form.opt1">Undergraduate admissions</option>
+                            <option data-i18n="contact.form.opt2">Master's admissions</option>
+                            <option data-i18n="contact.form.opt3">Scholarships &amp; financial aid</option>
+                            <option data-i18n="contact.form.opt4">International students</option>
+                            <option data-i18n="contact.form.opt5">Industry partnerships</option>
+                            <option data-i18n="contact.form.opt6">Media / press enquiry</option>
+                            <option data-i18n="contact.form.opt7">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Message *</label>
+                        <label data-i18n="contact.form.message">Message *</label>
                         <textarea rows="5" required></textarea>
                     </div>
                     <div class="form-group">
                         <label style="font-weight:400;font-size:.85rem;color:var(--text-muted)">
                             <input type="checkbox" required style="width:auto;margin-right:6px">
-                            I have read and agree to the EEA Privacy Policy
+                            <span data-i18n="contact.form.consent">I have read and agree to the EEA Privacy Policy</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.form.send">Send Message</button>
                 </form>
             </div>
         </div>
@@ -104,28 +104,28 @@
     <section style="background:var(--bg-alt);padding-top:60px;padding-bottom:60px">
         <div class="container">
             <div class="section-title">
-                <h2>Find Us</h2>
-                <p>The EEA campus is located on Κρήτης 45, Peania, 25 minutes from central Athens.</p>
+                <h2 data-i18n="contact.findus.h2">Find Us</h2>
+                <p data-i18n="contact.findus.p">The EEA campus is located on Κρήτης 45, Peania, 25 minutes from central Athens.</p>
             </div>
             <div class="map-wrap">
                 <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=23.847%2C37.957%2C23.917%2C38.000&amp;layer=mapnik&amp;marker=37.9789%2C23.8816" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="EEA campus on the map"></iframe>
             </div>
             <p style="text-align:center;font-size:.85rem;color:var(--text-muted);margin-top:10px">
-                <a href="https://www.openstreetmap.org/?mlat=37.9789&amp;mlon=23.8816&amp;zoom=14" target="_blank" rel="noopener">View larger map</a>
+                <a href="https://www.openstreetmap.org/?mlat=37.9789&amp;mlon=23.8816&amp;zoom=14" target="_blank" rel="noopener" data-i18n="contact.map.larger">View larger map</a>
             </p>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2 style="text-align:center;margin-bottom:40px">Contact Specific Departments</h2>
+            <h2 style="text-align:center;margin-bottom:40px" data-i18n="contact.depts.h2">Contact Specific Departments</h2>
             <div class="cards-grid">
-                <div class="card"><div class="card-body"><h3>Admissions Office</h3><p>For undergraduate and master's applications, scholarships, transcripts.</p><p style="font-size:.9rem"><strong>Phone:</strong> +30 210 36543069 (ext. 100)<br><strong>Email:</strong> admissions@elliniki-eng.gr</p></div></div>
-                <div class="card"><div class="card-body"><h3>International Office</h3><p>For non-EU students — visas, residence permits, accommodation.</p><p style="font-size:.9rem"><strong>Phone:</strong> +30 210 36543069 (ext. 105)<br><strong>Email:</strong> international@elliniki-eng.gr</p></div></div>
-                <div class="card"><div class="card-body"><h3>Office of the Registrar</h3><p>Enrolment certificates, degree attestations, official transcripts.</p><p style="font-size:.9rem"><strong>Phone:</strong> +30 210 36543069 (ext. 110)<br><strong>Email:</strong> registrar@elliniki-eng.gr</p></div></div>
-                <div class="card"><div class="card-body"><h3>IT Support</h3><p>Student / faculty portal, email account issues, eduroam.</p><p style="font-size:.9rem"><strong>Phone:</strong> +30 210 36543069 (ext. 200)<br><strong>Email:</strong> it-support@elliniki-eng.gr</p></div></div>
-                <div class="card"><div class="card-body"><h3>Career Services</h3><p>Internships, placement programme, employer enquiries.</p><p style="font-size:.9rem"><strong>Phone:</strong> +30 210 36543069 (ext. 150)<br><strong>Email:</strong> careers@elliniki-eng.gr</p></div></div>
-                <div class="card"><div class="card-body"><h3>Research Office</h3><p>Grant administration, contract research, visiting scholars.</p><p style="font-size:.9rem"><strong>Phone:</strong> +30 210 36543069 (ext. 180)<br><strong>Email:</strong> research@elliniki-eng.gr</p></div></div>
+                <div class="card"><div class="card-body"><h3 data-i18n="contact.d1.h3">Admissions Office</h3><p data-i18n="contact.d1.p">For undergraduate and master's applications, scholarships, transcripts.</p><p style="font-size:.9rem" data-i18n="contact.d1.info"><strong>Phone:</strong> +30 210 36543069 (ext. 100)<br><strong>Email:</strong> admissions@eea.edu.gr</p></div></div>
+                <div class="card"><div class="card-body"><h3 data-i18n="contact.d2.h3">International Office</h3><p data-i18n="contact.d2.p">For non-EU students — visas, residence permits, accommodation.</p><p style="font-size:.9rem" data-i18n="contact.d2.info"><strong>Phone:</strong> +30 210 36543069 (ext. 105)<br><strong>Email:</strong> international@eea.edu.gr</p></div></div>
+                <div class="card"><div class="card-body"><h3 data-i18n="contact.d3.h3">Office of the Registrar</h3><p data-i18n="contact.d3.p">Enrolment certificates, degree attestations, official transcripts.</p><p style="font-size:.9rem" data-i18n="contact.d3.info"><strong>Phone:</strong> +30 210 36543069 (ext. 110)<br><strong>Email:</strong> registrar@eea.edu.gr</p></div></div>
+                <div class="card"><div class="card-body"><h3 data-i18n="contact.d4.h3">IT Support</h3><p data-i18n="contact.d4.p">Student / faculty portal, email account issues, eduroam.</p><p style="font-size:.9rem" data-i18n="contact.d4.info"><strong>Phone:</strong> +30 210 36543069 (ext. 200)<br><strong>Email:</strong> it-support@eea.edu.gr</p></div></div>
+                <div class="card"><div class="card-body"><h3 data-i18n="contact.d5.h3">Career Services</h3><p data-i18n="contact.d5.p">Internships, placement programme, employer enquiries.</p><p style="font-size:.9rem" data-i18n="contact.d5.info"><strong>Phone:</strong> +30 210 36543069 (ext. 150)<br><strong>Email:</strong> careers@eea.edu.gr</p></div></div>
+                <div class="card"><div class="card-body"><h3 data-i18n="contact.d6.h3">Research Office</h3><p data-i18n="contact.d6.p">Grant administration, contract research, visiting scholars.</p><p style="font-size:.9rem" data-i18n="contact.d6.info"><strong>Phone:</strong> +30 210 36543069 (ext. 180)<br><strong>Email:</strong> research@eea.edu.gr</p></div></div>
             </div>
         </div>
     </section>

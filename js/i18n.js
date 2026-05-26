@@ -2,7 +2,7 @@
 // Bilingual switching between English (en) and Greek (el)
 (function () {
     const SUPPORTED = ['en', 'el'];
-    const DEFAULT_LANG = 'en';
+    const DEFAULT_LANG = 'el';
     const STORAGE_KEY = 'eea_lang';
 
     // Inline translations (so site works opened directly via file://, since fetch() can't read local JSON)
@@ -14,8 +14,9 @@
     function getLang() {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved && SUPPORTED.includes(saved)) return saved;
-        const browser = (navigator.language || 'en').toLowerCase();
-        if (browser.startsWith('el')) return 'el';
+        // Default to Greek; only fall back to English if the browser explicitly prefers en.
+        const browser = (navigator.language || 'el').toLowerCase();
+        if (browser.startsWith('en')) return 'en';
         return DEFAULT_LANG;
     }
 

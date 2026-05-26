@@ -5,7 +5,7 @@
 
   "top.phone": "+30 210 36543069",
   "top.address": "Κρήτης 45, Peania 190 02, Greece",
-  "top.email": "info@elliniki-eng.gr",
+  "top.email": "info@eea.edu.gr",
   "top.library": "Library",
   "top.career": "Careers",
   "top.alumni": "Alumni",
@@ -128,7 +128,7 @@
   "portal.signin": "Sign In",
   "portal.error": "Invalid username or password. Please verify your credentials and try again.",
   "portal.notice": "By signing in, you agree to abide by the EEA Acceptable Use Policy. Unauthorised access is prohibited.",
-  "portal.help": "Need help? Contact IT Support at it-support@elliniki-eng.gr or +30 210 36543069 ext. 200.",
+  "portal.help": "Need help? Contact IT Support at it-support@eea.edu.gr or +30 210 36543069 ext. 200.",
   "portal.first": "First-time user? Activate your account",
   "portal.switch": "Not a student? ",
   "portal.switchfac": "Not faculty? "

@@ -150,8 +150,8 @@
                 <h4 data-i18n="footer.contact">Get in Touch</h4>
                 <p><strong data-i18n="top.address">Κρήτης 45, Peania 190 02, Greece</strong></p>
                 <p>+30 210 36543069</p>
-                <p>info@elliniki-eng.gr</p>
-                <p>admissions@elliniki-eng.gr</p>
+                <p>info@eea.edu.gr</p>
+                <p>admissions@eea.edu.gr</p>
                 <p style="margin-top:14px;font-size:.85rem;opacity:.75">Mon – Fri: 09:00 – 18:00 (EET)</p>
             </div>
         </div>
