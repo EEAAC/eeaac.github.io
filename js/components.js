@@ -5,30 +5,6 @@
 (function () {
     'use strict';
 
-    function relPath() {
-        // Determine prefix for nested pages (e.g., /news/article-1.html needs ../ )
-        const path = location.pathname.replace(/\\/g, '/');
-        const depth = path.split('/').filter(s => s && !s.endsWith('.html')).length;
-        // If served as root index, depth is 0. If in a subfolder like /news/, depth is 1.
-        // Detect by checking if current file is in known subfolder
-        const segs = path.split('/').filter(Boolean);
-        const last = segs[segs.length - 1] || '';
-        const isFile = last.endsWith('.html') || last === '';
-        const parents = isFile ? segs.length - 1 : segs.length;
-        // We treat the academy folder as root; count subfolders after it
-        const rootIdx = segs.findIndex(s => s.toLowerCase() === 'elliniki-engineering-academy');
-        let nested = 0;
-        if (rootIdx >= 0) nested = (segs.length - rootIdx - 1) - (isFile ? 1 : 0);
-        else {
-            // fallback: pages in /news/ or /pages/ should be 1 deep
-            if (segs.length >= 2 && (segs[segs.length - 2] === 'news' || segs[segs.length - 2] === 'pages')) nested = 1;
-            else nested = 0;
-        }
-        return '../'.repeat(Math.max(0, nested));
-    }
-
-    const BASE = relPath();
-
     const HEADER_HTML = `
 <div class="topbar">
     <div class="container">
@@ -37,9 +13,9 @@
             <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> <span data-i18n="top.address">Κρήτης 45, Peania 190 02, Greece</span></span>
         </div>
         <div class="topbar-links">
-            <a href="${BASE}library.html" data-i18n="top.library">Library</a>
-            <a href="${BASE}careers.html" data-i18n="top.career">Careers</a>
-            <a href="${BASE}alumni.html" data-i18n="top.alumni">Alumni</a>
+            <a href="/library/" data-i18n="top.library">Library</a>
+            <a href="/careers/" data-i18n="top.career">Careers</a>
+            <a href="/alumni/" data-i18n="top.alumni">Alumni</a>
             <span class="lang-switch">
                 <button data-lang="en" type="button">EN</button>
                 <button data-lang="el" type="button">EL</button>
@@ -49,7 +25,7 @@
 </div>
 <header class="site-header">
     <div class="container">
-        <a href="${BASE}index.html" class="logo">
+        <a href="/" class="logo">
             <div class="logo-img">EEA</div>
             <div class="logo-text">
                 <h1 data-i18n="site.name">Elliniki Engineering Academy</h1>
@@ -59,46 +35,46 @@
         <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <nav class="main-nav">
             <ul>
-                <li><a href="${BASE}index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="/" data-i18n="nav.home">Home</a></li>
                 <li>
-                    <a href="${BASE}about.html" data-i18n="nav.about">About</a>
+                    <a href="/about/" data-i18n="nav.about">About</a>
                     <div class="dropdown">
-                        <a href="${BASE}about.html#intro" data-i18n="nav.about.intro">Introduction</a>
-                        <a href="${BASE}about.html#history" data-i18n="nav.about.history">Our History</a>
-                        <a href="${BASE}about.html#mission" data-i18n="nav.about.mission">Mission &amp; Values</a>
-                        <a href="${BASE}about.html#leadership" data-i18n="nav.about.leadership">Leadership</a>
-                        <a href="${BASE}about.html#campus" data-i18n="nav.about.campus">Campus &amp; Facilities</a>
+                        <a href="/about/#intro" data-i18n="nav.about.intro">Introduction</a>
+                        <a href="/about/#history" data-i18n="nav.about.history">Our History</a>
+                        <a href="/about/#mission" data-i18n="nav.about.mission">Mission &amp; Values</a>
+                        <a href="/about/#leadership" data-i18n="nav.about.leadership">Leadership</a>
+                        <a href="/about/#campus" data-i18n="nav.about.campus">Campus &amp; Facilities</a>
                     </div>
                 </li>
                 <li>
-                    <a href="${BASE}academics.html" data-i18n="nav.academics">Academics</a>
+                    <a href="/academics/" data-i18n="nav.academics">Academics</a>
                     <div class="dropdown">
-                        <a href="${BASE}academics.html#programs" data-i18n="nav.academics.programs">Programmes</a>
-                        <a href="${BASE}academics.html#departments" data-i18n="nav.academics.faculty">Departments</a>
-                        <a href="${BASE}academics.html#calendar" data-i18n="nav.academics.calendar">Academic Calendar</a>
-                        <a href="${BASE}library.html" data-i18n="nav.academics.library">Library</a>
+                        <a href="/academics/#programs" data-i18n="nav.academics.programs">Programmes</a>
+                        <a href="/academics/#departments" data-i18n="nav.academics.faculty">Departments</a>
+                        <a href="/academics/#calendar" data-i18n="nav.academics.calendar">Academic Calendar</a>
+                        <a href="/library/" data-i18n="nav.academics.library">Library</a>
                     </div>
                 </li>
                 <li>
-                    <a href="${BASE}admissions.html" data-i18n="nav.admissions">Admissions</a>
+                    <a href="/admissions/" data-i18n="nav.admissions">Admissions</a>
                     <div class="dropdown">
-                        <a href="${BASE}admissions.html#apply" data-i18n="nav.admissions.apply">How to Apply</a>
-                        <a href="${BASE}admissions.html#requirements" data-i18n="nav.admissions.requirements">Requirements</a>
-                        <a href="${BASE}admissions.html#tuition" data-i18n="nav.admissions.tuition">Tuition &amp; Fees</a>
-                        <a href="${BASE}admissions.html#international" data-i18n="nav.admissions.international">International Students</a>
+                        <a href="/admissions/#apply" data-i18n="nav.admissions.apply">How to Apply</a>
+                        <a href="/admissions/#requirements" data-i18n="nav.admissions.requirements">Requirements</a>
+                        <a href="/admissions/#tuition" data-i18n="nav.admissions.tuition">Tuition &amp; Fees</a>
+                        <a href="/admissions/#international" data-i18n="nav.admissions.international">International Students</a>
                     </div>
                 </li>
-                <li><a href="${BASE}research.html" data-i18n="nav.research">Research</a></li>
-                <li><a href="${BASE}campus-life.html" data-i18n="nav.life">Campus Life</a></li>
+                <li><a href="/research/" data-i18n="nav.research">Research</a></li>
+                <li><a href="/campus-life/" data-i18n="nav.life">Campus Life</a></li>
                 <li>
-                    <a href="${BASE}news.html" data-i18n="nav.news">News</a>
+                    <a href="/news/" data-i18n="nav.news">News</a>
                     <div class="dropdown">
-                        <a href="${BASE}news.html" data-i18n="nav.news.list">Latest News</a>
-                        <a href="${BASE}events.html" data-i18n="nav.news.events">Upcoming Events</a>
+                        <a href="/news/" data-i18n="nav.news.list">Latest News</a>
+                        <a href="/events/" data-i18n="nav.news.events">Upcoming Events</a>
                     </div>
                 </li>
-                <li><a href="${BASE}contact.html" data-i18n="nav.contact">Contact</a></li>
-                <li><a href="${BASE}login.html" class="nav-cta" data-i18n="nav.portal">Portal Login</a></li>
+                <li><a href="/contact/" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="/login/" class="nav-cta" data-i18n="nav.portal">Portal Login</a></li>
             </ul>
         </nav>
     </div>
@@ -127,23 +103,23 @@
             <div>
                 <h4 data-i18n="footer.quick">Quick Links</h4>
                 <ul>
-                    <li><a href="${BASE}about.html" data-i18n="nav.about">About</a></li>
-                    <li><a href="${BASE}academics.html" data-i18n="nav.academics">Academics</a></li>
-                    <li><a href="${BASE}admissions.html" data-i18n="nav.admissions">Admissions</a></li>
-                    <li><a href="${BASE}research.html" data-i18n="nav.research">Research</a></li>
-                    <li><a href="${BASE}campus-life.html" data-i18n="nav.life">Campus Life</a></li>
-                    <li><a href="${BASE}news.html" data-i18n="nav.news">News</a></li>
+                    <li><a href="/about/" data-i18n="nav.about">About</a></li>
+                    <li><a href="/academics/" data-i18n="nav.academics">Academics</a></li>
+                    <li><a href="/admissions/" data-i18n="nav.admissions">Admissions</a></li>
+                    <li><a href="/research/" data-i18n="nav.research">Research</a></li>
+                    <li><a href="/campus-life/" data-i18n="nav.life">Campus Life</a></li>
+                    <li><a href="/news/" data-i18n="nav.news">News</a></li>
                 </ul>
             </div>
             <div>
                 <h4 data-i18n="footer.programs">Programmes</h4>
                 <ul>
-                    <li><a href="${BASE}academics.html#cs" data-i18n="prog.cs.title">Computer Engineering</a></li>
-                    <li><a href="${BASE}academics.html#civil" data-i18n="prog.civil.title">Civil Engineering</a></li>
-                    <li><a href="${BASE}academics.html#mech" data-i18n="prog.mech.title">Mechanical Engineering</a></li>
-                    <li><a href="${BASE}academics.html#elec" data-i18n="prog.elec.title">Electrical Engineering</a></li>
-                    <li><a href="${BASE}academics.html#env" data-i18n="prog.env.title">Environmental Engineering</a></li>
-                    <li><a href="${BASE}academics.html#arch" data-i18n="prog.arch.title">Architecture</a></li>
+                    <li><a href="/academics/#cs" data-i18n="prog.cs.title">Computer Engineering</a></li>
+                    <li><a href="/academics/#civil" data-i18n="prog.civil.title">Civil Engineering</a></li>
+                    <li><a href="/academics/#mech" data-i18n="prog.mech.title">Mechanical Engineering</a></li>
+                    <li><a href="/academics/#elec" data-i18n="prog.elec.title">Electrical Engineering</a></li>
+                    <li><a href="/academics/#env" data-i18n="prog.env.title">Environmental Engineering</a></li>
+                    <li><a href="/academics/#arch" data-i18n="prog.arch.title">Architecture</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -158,10 +134,10 @@
         <div class="footer-bottom">
             <div data-i18n="footer.copyright">© 2026 Elliniki Engineering Academy. All rights reserved.</div>
             <div class="links">
-                <a href="${BASE}privacy.html" data-i18n="footer.privacy">Privacy Policy</a> ·
-                <a href="${BASE}terms.html" data-i18n="footer.terms">Terms of Use</a> ·
-                <a href="${BASE}accessibility.html" data-i18n="footer.accessibility">Accessibility</a> ·
-                <a href="${BASE}sitemap.html" data-i18n="footer.sitemap">Sitemap</a>
+                <a href="/privacy/" data-i18n="footer.privacy">Privacy Policy</a> ·
+                <a href="/terms/" data-i18n="footer.terms">Terms of Use</a> ·
+                <a href="/accessibility/" data-i18n="footer.accessibility">Accessibility</a> ·
+                <a href="/sitemap/" data-i18n="footer.sitemap">Sitemap</a>
             </div>
         </div>
     </div>

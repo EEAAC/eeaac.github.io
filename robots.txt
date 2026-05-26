@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /student-portal.html
-Disallow: /faculty-portal.html
-Disallow: /login.html
-Sitemap: /sitemap.html
+Disallow: /student-portal/
+Disallow: /faculty-portal/
+Disallow: /login/
+Sitemap: https://eea.edu.gr/sitemap/
