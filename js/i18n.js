@@ -14,9 +14,6 @@
     function getLang() {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved && SUPPORTED.includes(saved)) return saved;
-        // Default to Greek; only fall back to English if the browser explicitly prefers en.
-        const browser = (navigator.language || 'el').toLowerCase();
-        if (browser.startsWith('en')) return 'en';
         return DEFAULT_LANG;
     }
 

@@ -17,8 +17,8 @@
             <a href="/careers/" data-i18n="top.career">Careers</a>
             <a href="/alumni/" data-i18n="top.alumni">Alumni</a>
             <span class="lang-switch">
-                <button data-lang="en" type="button">EN</button>
                 <button data-lang="el" type="button">EL</button>
+                <button data-lang="en" type="button">EN</button>
             </span>
         </div>
     </div>
